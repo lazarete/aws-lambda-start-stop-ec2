@@ -1,31 +1,24 @@
 {
-    "Version": "2020-02-13",
+    "Version": "2012-10-17",
     "Statement": [
         {
-            "Sid": "VisualEditor0",
-            "Effect": "Allow",
-            "Action": [
-                "logs:CreateLogStream",
-                "logs:PutLogEvents"
-            ],
-            "Resource": "arn:aws:logs:*:*:*"
+                "Effect": "Allow",
+                "Action": [
+                    "logs:CreateLogGroup",
+                    "logs:CreateLogStream",
+                    "logs:PutLogEvents"
+                ],
+                "Resource": "arn:aws:logs:*:*:*"
         },
-        {
-            "Sid": "VisualEditor1",
-            "Effect": "Allow",
-            "Action": [
-                "ec2:DescribeInstances",
-                "ec2:StartInstances",
-                "ec2:DescribeRegions",
-                "ec2:StopInstances"
-            ],
-            "Resource": "*"
-        },
-        {
-            "Sid": "VisualEditor2",
-            "Effect": "Allow",
-            "Action": "logs:CreateLogGroup",
-            "Resource": "arn:aws:logs:*:*:*"
-        }
-    ]
+           {
+                "Effect": "Allow",
+               "Action": [
+                    "ec2:DescribeInstances",
+                    "ec2:DescribeRegions",
+                    "ec2:StartInstances",
+                    "ec2:StopInstances"
+                ],
+                "Resource": "*"
+                 }
+         ]
 }
